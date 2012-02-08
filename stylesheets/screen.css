@@ -295,28 +295,6 @@ td { vertical-align: top; }
 
 
 
-html {
-    font-size: 100%;
-    height: 100%;
-}
-body {
-    background-color: #fff;
-    color: #111;
-    font: normal 1.1em/1.5em 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
-    margin: 0;
-    height: 100%;
-}
-
-h1,
-h2 {
-    letter-spacing: -.01em;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #ddd;
-}
-
 a.comment_delete_link,
 a.comment_edit_link,
 a.comment_replyto_link,
@@ -352,8 +330,6 @@ a.next_post,
 a.prev_post {
     background-color: #e2e2e2;
     color: #3C4D69;
-    margin: 0 0 2em;
-    padding: .4em .6em;
 }
 a.next_page:hover,
 a.prev_page:hover,
@@ -372,22 +348,15 @@ a.logout {
 }
 
 label {
-    color: #777;
     display: block;
-    font: bold 1.4em "palatino linotype", palatino, georgia, "times new roman", times, serif;
     font-weight: bold;
-    padding: 0 0 0.2em 0;
 }
 input[type="text"],
 input[type="password"],
 textarea {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
-    border-bottom: 1px solid #eee;
-    border-right: 1px solid #eee;
-    font-family: 'Monaco', Courier, monospace;
     margin-bottom: 1.5em;
-    padding: .3em .4em;
 }
 input[type="file"] {
     margin-bottom: 1.5em;
@@ -397,7 +366,6 @@ input[type="password"] {
     width: 20em;
 }
 textarea.wide {
-    width: 432px;
 }
 input.big {
     font-size: 1.5em;
@@ -405,14 +373,11 @@ input.big {
 
 div#controls {
     background-color: #131313;
-    border-bottom: .1em solid #0f0f0f;
-    padding: .2em 0 .3em;
     width: 100%;
 }
 div#controls ul {
     margin: 0 auto;
     padding: .4em;
-    width: 660px;
 }
 div#controls ul li {
     background: none;
@@ -439,11 +404,7 @@ div#controls ul li.close a:hover {
 }
 
 div#footer {
-    background: url('../images/dots-lightgrey.gif') top left repeat;
-    clear: both;
     color: #888;
-    margin: 3em 0;
-    padding: .4em .6em;
 }
 div#footer a.chyrp:hover {
     color: #6189a3;
@@ -452,8 +413,6 @@ div#footer a.atom {
     background-color: #bbb;
     border: none;
     color: #222;
-    margin: -2.5em .4em 0 0;
-    padding: .3em .6em;
     float: right;
 }
 div#footer a.atom:hover {
