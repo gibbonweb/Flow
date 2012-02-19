@@ -1,4 +1,5 @@
             <div id="sidebar">
+		<div class="block">
                 <form action="$site.url" method="get" accept-charset="utf-8">
                     <fieldset>
                         <input type="hidden" name="action" value="search" id="action" />
@@ -22,7 +23,6 @@
                     {% endfor %}
                 </ul>
                 {% endif %}
-
                 <h1>${ "Welcome, %s!" | translate | format(visitor.login | fallback("Guest" | translate)) }</h1>
                 <ul>
                     {% if visitor.logged_in %}
@@ -32,15 +32,16 @@
                     {% endif %}
                     <li><a href="{% url "logout" %}">${ "Log Out" | translate }</a></li>
                     {% else %}
-                    <li><a href="{% url "login" %}">${ "Log In" | translate }</a></li>
+                    <!--<li><a href="{% url "login" %}">${ "Log In" | translate }</a></li>-->
                     {% if site.can_register %}
                     <li><a href="{% url "register" %}">${ "Register" | translate }</a></li>
                     {% endif %}
                     <li><a href="{% url "lost_password" %}">${ "Lost Password?" | translate }</a></li>
                     {% endif %}
                 </ul>
+		</div>
 
-${ trigger.call("sidebar") }
+		<div class="block">
                 {% if tags %}
                 <h1>${ "Tags" | translate }</h1>
                 <ul id="tags_list">
@@ -56,7 +57,10 @@ ${ trigger.call("sidebar") }
                     <li><a href="{% url "tags" %}">${ "All &rarr;" | translate }</a></li>
                 </ul>
                 {% endif %}
+		</div>
 
+		<div class="block">
+${ trigger.call("sidebar") }
                 {% if theme.archives_list %}
                 <h1>${ "Archives" | translate }</h1>
                 <ul>
@@ -69,4 +73,5 @@ ${ trigger.call("sidebar") }
                     <li><a href="{% url "archive" %}">${ "All &rarr;" | translate }</a></li>
                 </ul>
                 {% endif %}
+		</div>
             </div>

@@ -160,18 +160,139 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
+body {
+	padding: 0 1em 2em;
+	margin: 0;
+	font-family: 'Vollkorn', Georgia, serif;
+}
+#header {
+	background-color: #eee;
+	margin-top: 1em;
+}
+h1 {
+	font-weight: bold;
+	font-style: italic;
+}
+#header h1, #header h2 {
+	font-family: 'Vollkorn', 'Georgia', serif;
+}
+#header h1 {
+	font-size: 3em;
+	margin-left: 2em;
+	margin-top: 0.5em;
+	line-height: 1em;
+}
+#header h1 a, #header h1 a:link, #header h1 a:visited {
+	text-decoration: none;
+	color: #666;
+}
+#header h2 {
+	font-size: 0.8em;
+	margin-left: 7.8em;
+	margin-top: -3em;
+	line-height: 1em;
+	color: #999;
+}
+
+#content {
+	width: 80%;
+	float: left;
+}
+#sidebar {
+	width: 20%;
+	float: right;
+	background-color: #666;
+}
+#footer {
+	clear: both;
+}
+#sidebar h1 {
+	font-size: 1em;
+}
+
+.clear {
+	clear: both;
+}
+.date, .next_page, .prev_page {
+	clear: both;
+	background-color: #eee;
+}
+
+.post.photo, .post.quote, .post.link, .post.audio {
+	float: left;
+	width: 30%;
+	padding: 1.5%;
+}
+.post.photo img {
+	width: 100%;
+}
+.post.text {
+	float: left;
+	width: 63%;
+	padding: 1.5%;
+}
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+	#content, #sidebar {
+		clear: both;
+		width: 100%;
+		float: none;
+	}
+	#sidebar .block {
+		width: 30%;
+		padding: 1.5%;
+		float: left;
+	}
+}
 
 
+@media screen and (max-width: 700px) {
+	.post.photo {
+		width: 47%;
+	}
+	.post.text {
+		width: 100%;
+		float: none;
+	}
+}
 
 
+@media screen and (max-width: 480px) {
+	body {
+		padding: 0;
+	}
+	#header h1, #header h2 {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	.post.photo, .post.text, .post.quote {
+		width: 100%;
+		padding: 1.5% 0;
+		float: none;
+	}
+	.date, .next_page, .prev_page, .post p, .post h2, .post span.info, .post span.controls {
+		padding: 3%;
+	}
 
+}
 
-
-
-
-
-
-
+/* Admin */
+#controls {
+	background-color: #ccc;
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	font-size: .75em;
+}
+#controls ul {}
+#controls li {
+	float: left;
+	display: block;
+	margin: 0.25em 0.5em;
+}
 
 
 
