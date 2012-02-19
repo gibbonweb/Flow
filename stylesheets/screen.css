@@ -218,12 +218,12 @@ h1 {
 	background-color: #eee;
 }
 
-.post.photo, .post.quote, .post.link, .post.audio {
+.post.photo, .post.quote, .post.link, .post.audio, .post.video {
 	float: left;
 	width: 30%;
 	padding: 1.5%;
 }
-.post.photo img {
+.post.photo img, .post.video iframe {
 	width: 100%;
 }
 .post.text {
@@ -233,7 +233,7 @@ h1 {
 }
 
 /* Responsive */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
 	#content, #sidebar {
 		clear: both;
 		width: 100%;
@@ -247,8 +247,8 @@ h1 {
 }
 
 
-@media screen and (max-width: 700px) {
-	.post.photo {
+@media screen and (max-width: 990px) {
+	.post.photo, .post.video {
 		width: 47%;
 	}
 	.post.text {
@@ -267,7 +267,7 @@ h1 {
 		padding: 0;
 		text-align: center;
 	}
-	.post.photo, .post.text, .post.quote {
+	.post.photo, .post.video, .post.text, .post.quote {
 		width: 100%;
 		padding: 1.5% 0;
 		float: none;
